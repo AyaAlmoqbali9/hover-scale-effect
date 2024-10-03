@@ -1,0 +1,36 @@
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.btns {
+    display: flex;
+    column-gap: 2rem;
+    background-color: var(--color-white-shade);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.btn {
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.25s ease-in, opacity 0.25s ease-in, filter 0.25s ease-in;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+}
+
+.btn:hover {
+    transform: scale(1.2);
+}
+
+.btns:has(.btn:hover) .btn:not(:hover) {
+    transform: scale(0.8);
+    opacity: 0.8;
+    filter: blur(4px);
+}
